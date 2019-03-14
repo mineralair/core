@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd"
+>
+<!-- 2019-03-14
+"Disable the PayPal or Amazon Pay payment methods on the frontend checkout page
+for orders with an «autoshipment» product":
+https://github.com/mineralair/core/issues/4 -->
+	<event name='payment_method_is_active'>
+		<observer
+			instance='Mineralair\Core\Observer\PaymentMethodIsActive'
+			name='Mineralair\Core\Observer\PaymentMethodIsActive'
+		/>
+	</event>
+</config>
