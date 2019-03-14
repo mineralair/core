@@ -4,7 +4,8 @@ A custom module for [staging.mineralair.com](https://staging.mineralair.com).
 ```
 bin/magento maintenance:enable
 composer clear-cache
-composer require mineralair/core:*
+composer update mage2pro/core --ignore-platform-reqs 
+composer require mineralair/core:0.0.1 --ignore-platform-reqs
 bin/magento setup:upgrade
 rm -rf var/di var/generation generated/code && bin/magento setup:di:compile
 rm -rf pub/static/* && bin/magento setup:static-content:deploy -f en_US --area adminhtml --theme Magento/backend && bin/magento setup:static-content:deploy -f en_US --area frontend --theme Yaman/mineralair
@@ -15,7 +16,7 @@ bin/magento maintenance:disable
 ```
 bin/magento maintenance:enable
 composer clear-cache
-composer update mineralair/core
+composer update mineralair/core --ignore-platform-reqs
 bin/magento setup:upgrade
 rm -rf var/di var/generation generated/code && bin/magento setup:di:compile
 rm -rf pub/static/* && bin/magento setup:static-content:deploy -f en_US --area adminhtml --theme Magento/backend && bin/magento setup:static-content:deploy -f en_US --area frontend --theme Yaman/mineralair
