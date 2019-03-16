@@ -15,7 +15,7 @@ define(['jquery', 'Magento_Ui/js/modal/modal'], function($) {return function() {
 				,text: $.mage.__('Yes, please convert my order<br/>to a single payment!')
 			}
 			,{
-				class: 'action'
+				class: 'action mnr-no'
 				,click: function () {m.modal('closeModal');}
 				,text: $.mage.__('No, I will choose a different payment method')
 			}
