@@ -1,6 +1,7 @@
 <?php
 namespace Mineralair\Core\Controller\Modal;
-use Df\Framework\W\Result\Json;
+use Magento\Framework\App\Response\Http as Response;
+use Magento\Framework\App\ResponseInterface as IResponse;
 /**
  * 2019-03-17
  * Convert all «autoshipment» products to their non-autoshipment counterparts
@@ -16,9 +17,9 @@ class Index extends \Df\Framework\Action {
 	 * @used-by \Magento\Framework\App\Action\Action::dispatch():
 	 * 		$result = $this->execute();
 	 * https://github.com/magento/magento2/blob/2.2.1/lib/internal/Magento/Framework/App/Action/Action.php#L84-L125
-	 * @return Json
+	 * @return IResponse|Response
 	 */
 	function execute() {
-		return Json::i([]);
+		return $this->_redirect('checkout/cart');
 	}
 }

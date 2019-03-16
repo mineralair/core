@@ -11,7 +11,7 @@ define(['jquery', 'Magento_Ui/js/modal/modal'], function($) {return function() {
 		buttons: [
 			{
 				class: 'action primary'
-				,click: function () {m.modal('closeModal');}
+				,click: function () {window.location = BASE_URL + 'mineralair-core/modal';}
 				,text: $.mage.__('Yes, please convert my order<br/>to a single payment!')
 			}
 			,{
