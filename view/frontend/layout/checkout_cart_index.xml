@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<page 
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+<!-- 2019-03-15
+"Show the «Sorry for the inconvenience» popup
+if a customer tries to use the PayPal or Amazon Pay payment method
+for an order with an «autoshipment» product": https://github.com/mineralair/core/issues/2 -->
+	<body><referenceContainer name='root'><block class='Mineralair\Core\Js'/></referenceContainer></body>
+</page>
