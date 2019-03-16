@@ -6,8 +6,8 @@
  * 2) «How to rewrite widget function with mixins?» https://magento.stackexchange.com/a/144862
  */
 define([
-	'jquery'
-], function($) {return function(parent) {$.widget('amazon.AmazonButton', parent, {
+	'jquery', 'Mineralair_Core/modal'
+], function($, modal) {return function(parent) {$.widget('amazon.AmazonButton', parent, {
 	/**
 	 * 2019-03-15
 	 * @override
@@ -16,14 +16,7 @@ define([
 	 */
 	_renderAmazonButton: function() {
 		OffAmazonPayments.Button(this.element.attr('id'), this.options.merchantId, {
-			authorization: $.proxy(function() {
-				if (0) {
-					console.log('test');
-				}
-				else {
-					amazon.Login.authorize(this._getLoginOptions(), this._popupCallback());
-				}
-			}, this)
+			authorization: $.proxy(function() {modal();}, this)
 			,color: this.options.buttonColor
 			,language: this.options.buttonLanguage
 			,size: this.options.buttonSize
