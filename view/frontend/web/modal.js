@@ -12,7 +12,7 @@ define(['jquery', 'Magento_Ui/js/modal/modal'], function($) {return function() {
 			{
 				class: 'action primary'
 				,click: function () {m.modal('closeModal');}
-				,text: $.mage.__('Yes, please convert my order to a single payment!')
+				,text: $.mage.__('Yes, please convert my order<br/>to a single payment!')
 			}
 			,{
 				class: 'action'
