@@ -3,9 +3,60 @@
 // if a customer tries to use the PayPal or Amazon Pay payment method
 // for an order with an «autoshipment» product": https://github.com/mineralair/core/issues/2
 .mnr-modal {
+	max-width: 55em;
+	margin: 0 auto;
 	.modal-inner-wrap {
-		margin-top: 10%;
+		margin-top: 35%;
 		// 2019-03-16 "How is the mage.modal UI widget's animation implemented?" https://mage2.pro/t/1306
 		transition: none;
+		.modal-content {
+			padding-top: 0;
+			padding-left: 50px;
+			padding-right: 50px;
+			.mnr-modal-head {
+				text-align: center;
+				.mnr-modal-amazon {
+					background-image: url('@{baseDir}Mineralair_Core/i/amazon.png');
+					background-repeat: no-repeat;
+					display: inline-block;
+					height: 37px;
+					margin-left: 5em;
+					width: 157px;
+				}
+				.mnr-modal-paypal {
+					background-image: url('@{baseDir}Mineralair_Core/i/paypal.png');
+					display: inline-block;
+					height: 37px;
+					width: 150px;
+				}
+			}
+			.mnr-modal-body {
+				color: black;
+				font-size: 14px;
+				font-weight: bold;
+				letter-spacing: 1.5px;
+				line-height: 2;
+				margin-bottom: 1em;
+				margin-top: 1em;
+			}
+		}
+		.modal-footer {
+			background: none;
+			.action.primary {
+				background-color: #DC536F;
+				box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+				font-size: 24px;
+				text-transform: uppercase;
+				transition: none;
+				span {
+					font-weight: 600 !important;
+				}
+				&:hover, &:hover span {
+					background: #b65a65;
+					border-color: #808080 !important;
+					color: #808080 !important;
+				}
+			}
+		}
 	}
 }
