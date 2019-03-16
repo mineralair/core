@@ -7,5 +7,9 @@
 "Show the «Sorry for the inconvenience» popup
 if a customer tries to use the PayPal or Amazon Pay payment method
 for an order with an «autoshipment» product": https://github.com/mineralair/core/issues/2 -->
-	<body><referenceContainer name='root'><block class='Mineralair\Core\Js'/></referenceContainer></body>
+	<body>
+		<referenceContainer name='root'>
+			<block class='Mineralair\Core\Js' template='Mineralair_Core::modal.phtml'/>
+		</referenceContainer>
+	</body>
 </page>

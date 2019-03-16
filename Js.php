@@ -1,6 +1,6 @@
 <?php
 namespace Mineralair\Core;
-use Magento\Framework\View\Element\AbstractBlock as _P;
+use Magento\Framework\View\Element\Template as _P;
 /**
  * 2019-03-15
  * "Show the «Sorry for the inconvenience» popup
@@ -30,5 +30,7 @@ class Js extends _P {
 	 * https://github.com/magento/magento2/blob/2.2.0/lib/internal/Magento/Framework/View/Element/AbstractBlock.php#L643-L689
 	 * @return string
 	 */
-	final protected function _toHtml() {return !mnr_recurring() ? '' : df_js(__CLASS__);}
+	final protected function _toHtml() {return !mnr_recurring() ? '' : df_cc_n(
+		parent::_toHtml(), df_js(__CLASS__)
+	);}
 }
