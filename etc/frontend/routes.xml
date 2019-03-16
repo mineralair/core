@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd"
+>
+<!-- 2019-03-17
+"Convert all «autoshipment» products to their non-autoshipment counterparts
+on the red «PLEASE CONVERT» button click": https://github.com/mineralair/core/issues/3 -->
+	<router id='standard'>
+		<route id='Mineralair_Core' frontName='mineralair-core'>
+			<module name='Mineralair_Core'/>
+		</route>
+	</router>
+</config>
