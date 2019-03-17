@@ -36,7 +36,7 @@ final class PaymentMethodIsActive implements ObserverInterface {
 			df_is_checkout()
 			&& ($q = $ob['quote']) /** @var Q|null $q */
 			&& (df_contains($m->getCode(), 'amazon') || 'paypal' === df_class_second_lc($m))
-			&& mnr_recurring($q)
+			&& mnr_recurring_has($q)
 		) {
 			$r = $ob['result']; /** @var _DO $r */
 			$r['is_available'] = false;

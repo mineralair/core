@@ -2,6 +2,7 @@
 namespace Mineralair\Core\Controller\Modal;
 use Magento\Framework\App\Response\Http as Response;
 use Magento\Framework\App\ResponseInterface as IResponse;
+use Magento\Quote\Model\Quote as Q;
 /**
  * 2019-03-17
  * Convert all «autoshipment» products to their non-autoshipment counterparts
@@ -20,6 +21,8 @@ class Index extends \Df\Framework\Action {
 	 * @return IResponse|Response
 	 */
 	function execute() {
+		$q = df_quote(); /** @var Q $q */
+		$ii = mnr_recurring_filter();
 		return $this->_redirect('checkout/cart');
 	}
 }

@@ -30,7 +30,7 @@ class Js extends _P {
 	 * https://github.com/magento/magento2/blob/2.2.0/lib/internal/Magento/Framework/View/Element/AbstractBlock.php#L643-L689
 	 * @return string
 	 */
-	final protected function _toHtml() {return !mnr_recurring() ? '' : df_cc_n(
+	final protected function _toHtml() {return !mnr_recurring_has() ? '' : df_cc_n(
 		parent::_toHtml(), df_js(__CLASS__)
 	);}
 }
