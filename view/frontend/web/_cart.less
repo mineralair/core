@@ -10,7 +10,14 @@
 	// https://github.com/mineralair/core/issues/5
 	overflow-y: hidden;
 	.modal-inner-wrap {
-		margin-top: 35%;
+		// 2019-03-26 https://stackoverflow.com/a/19461564
+		// https://www.upwork.com/messages/rooms/room_8bee0dbc4fd74e09e5126906f1a73701/story_2b430801f8df40da1a9a73a1dcb251e9
+		margin-bottom: 0;
+		margin-top: 0;
+		top: 50%;
+		-moz-transform: translateY(-50%) !important;
+		-webkit-transform: translateY(-50%) !important;
+		transform: translateY(-50%) !important;
 		// 2019-03-16 "How is the mage.modal UI widget's animation implemented?" https://mage2.pro/t/1306
 		transition: none;
 		.modal-content {
