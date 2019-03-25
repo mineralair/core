@@ -5,6 +5,10 @@
 .mnr-modal {
 	max-width: 50em;
 	margin: 0 auto;
+	// 2019-03-25
+	// "A vertical scrollbar is shown for the PayPal / Amazon popup on narrow screens"
+	// https://github.com/mineralair/core/issues/5
+	overflow-y: hidden;
 	.modal-inner-wrap {
 		margin-top: 35%;
 		// 2019-03-16 "How is the mage.modal UI widget's animation implemented?" https://mage2.pro/t/1306
