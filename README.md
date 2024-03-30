@@ -1,4 +1,4 @@
-A custom module for [staging.mineralair.com](https://staging.mineralair.com).
+A custom module for [mineralair.com](https://mineralair.com).
 
 ## How to install
 ```
