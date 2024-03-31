@@ -1,4 +1,4 @@
-A custom module for [mineralair.com](https://mineralair.com).
+A custom module for [mineralair.com](https://mineralair.com) (Magento 2).
 
 ## How to install
 ```
